@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add Employee</title>
+    </head>
+    <body>
+        <h2>Add Action </h2>
+        <br/>
+        <br/>
+        <br/>
+        <form method="post" action="/mail/addAction">
+        <label for="status">Select the status:</label>
+        <select name="status">
+                    <option value="without a status"> without a status</option>
+                    <option value="vip"> VIP </option>
+                    <option value="sudden"> sudden</option>                   
+        </select>
+            <table border=0 >
+            <tr><td align="right">PIN:</td><td align="left"><input type="text" name="pin" size="50"></input></td></tr> <tr><td align="right"></td><td align="left"><input type="submit" value="Send"></input></td></tr>
+        </table>
+    </form>
+</body>
+</html>

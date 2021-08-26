@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <h2>New action:</h2>
+	<a th:href="@{'/mail/listAction'}">List Action</a>
+
+	<table border=0>
+		<tr>
+		    <td align="right">number:</td>
+			<td th:text="${action.number}"></td>
+		</tr>
+		<tr>	
+		   <td align="right">status:</td>
+			<td th:text="${action.status}"></td>
+		</tr>
+		<tr>	
+		    <td align="right">time for wait:</td>
+			<td th:text="${timeForWait}"></td>
+		</tr>
+		<tr>	
+		    <td align="right">amount:</td>
+			<td th:text="${amount}"></td>
+		</tr>
+		
+		
+	</table>
+
+</body>
+</html>

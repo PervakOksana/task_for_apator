@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>List Action</title>
+    </head>
+    <body>
+        <h2>Action List</h2>
+        <h2>Info about action</h2>
+        <form method="post" action="/mail/infoAction">
+            <table border=0 >      
+            <tr><td align="right">Number:</td><td align="left"><input type="text" name="number" size="50"></input></td></tr> <tr><td align="right"></td><td align="left">
+            <input type="submit" value="Send"></input></td></tr>
+           </table>
+        </form>
+    
+        <a th:href="@{'/mail/addActionPage'}">Add Action</a>
+        <br/>
+        <table th:if="${ not #lists.isEmpty(queueActionList) }" border=1>
+        <tr>
+            <td>User Name</td>
+            <td>Login</td>
+            <td>Status</td>
+            <td>Number</td>
+            <td>Time Current</td>
+            <td>Time Start</td>
+            <td>Time End</td>
+        </tr>
+        <tr th:each="queueAction : ${queueActionList}">
+            <td th:text="${queueAction.userName}"></td>
+            <td th:text="${queueAction.userLogin}"></td>
+            <td th:text="${queueAction.status}"></td>
+            <td th:text="${queueAction.number}"></td>
+            <td th:text="${queueAction.timeCurrent}"></td>
+            <td th:text="${queueAction.timeStart}"></td>
+            <td th:text="${queueAction.timeEnd}"></td>
+            
+        </tr>
+    </table>
+</body>
+</html>
